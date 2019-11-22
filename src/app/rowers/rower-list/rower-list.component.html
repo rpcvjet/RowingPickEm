@@ -1,0 +1,57 @@
+   <!-- <div class="main-container">
+
+   <div class="racer-container">
+    <h2>BoatHouse Rowers</h2>
+      <div class="rowercontainer">
+        <mat-list>
+          <div cdkDropList
+              id="rowerlist"
+              cdkDropListConnectedTo="boatlist"
+              [cdkDropListData]="allrowers"
+              (cdkDropListDropped)="drop($event)"
+              >
+            <mat-list-item *ngFor="let r of allrowers" class="myrowers" cdkDrag [cdkDragData]="r">
+              <img matListAvatar [src]="r.image" alt="...">
+              <h3 matLine> {{r.name}} </h3>
+              <p matLine>
+               Age: <span> {{r.age}} </span> <br/>
+               Side: <span> {{r.side}} </span> <br/>
+               2k: <span> {{r.erg2k}} </span> <br/>
+              </p>
+            </mat-list-item>
+          </div>
+          </mat-list>
+      </div>
+</div>
+
+<div class="boat-container">
+
+    <h2 class="">8-person Boat</h2>
+    <h2>Ave Age:{{aveAge}}</h2>
+  <mat-list class="" >
+      <div cdkDropList
+          id="boatlist"
+          cdkDropListConnectedTo="rowerlist"
+          [cdkDropListData]="racers"
+          (cdkDropListDropped)="drop($event)"
+          class="racers"
+          >
+          <mat-list-item *ngFor="let boatracer of racers"cdkDrag [cdkDragData]="boatracer" class="myracers">
+            <img matListAvatar [src]="boatracer.image" alt="...">
+            <h3 matLine> {{boatracer.name}} </h3>
+            <p matLine>
+              <span> {{boatracer.age}} </span>
+              <span> {{boatracer.side}} </span>
+              <span> {{boatracer.erg2k}} </span>
+            </p>
+          </mat-list-item>
+        </div>
+
+
+  </mat-list>
+  </div>
+</div>
+
+
+
+ -->

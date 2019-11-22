@@ -1,0 +1,364 @@
+{
+  "rowers": [
+    {
+      "id": 1,
+      "name": "Jakob Cormier",
+      "side": "Port",
+      "age": 25,
+      "erg2k": "6:42",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/urrutimeoli/128.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Devan Kunde",
+      "side": "Starboard",
+      "age": 55,
+      "erg2k":"7:46",
+      "team": "Mens Competitive",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/jacobbennett/128.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Giuseppe Predovic",
+      "side": "Port",
+      "age": 41,
+      "erg2k": "7:02",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/attacks/128.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Antwon Goodwin",
+      "side": "Starboard",
+      "age": 37,
+      "erg2k" :  "7:12",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/helderleal/128.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Yazmin Trantow",
+      "side": "Starboard",
+      "age": 21,
+      "erg2k": "6:26",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/dansowter/128.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Watson Boyle",
+      "side": "Port",
+      "age": 25,
+      "erg2k": "6:55",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/allthingssmitty/128.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Pascale Jakubowski",
+      "side": "Port",
+      "age": 45,
+      "erg2k": "7:42",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/mbilderbach/128.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Maverick White",
+      "side": "Port",
+      "age": 43,
+      "erg2k": "6:59",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/sainraja/128.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Winnifred Graham",
+      "side": "Starboard",
+      "age": 51,
+      "erg2k": "7:33",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/jacksonlatka/128.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Reed Blanda",
+      "side": "Starboard",
+      "age": 52,
+      "erg2k": "7:12",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/charliecwaite/128.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Lonnie Hammes",
+      "side": "Port",
+      "age": 35,
+      "erg2k": "6:49",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/victordeanda/128.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Kayden Lowe",
+      "side": "Starboard",
+      "age": 19,
+      "erg2k":"6:33",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/garand/128.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Guadalupe Rice",
+      "side": "Port",
+      "age": 44,
+      "erg2k": "7:09",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/digitalmaverick/128.jpg"
+    },
+    {
+      "id": 14,
+      "name": "King Kirlin",
+      "side": "Starboard",
+      "age": 49,
+      "erg2k" :  "7:55",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/rikas/128.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Declan Kemmer",
+      "side": "Starboard",
+      "age": 31,
+      "erg2k": "6:47",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/vitor376/128.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Onie Wiegand",
+      "side": "Port",
+      "age": 35,
+      "erg2k": "6:56",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/raphaelnikson/128.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Al Klocko",
+      "side": "Port",
+      "age": 61,
+      "erg2k": "8:32",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/kianoshp/128.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Reilly Bauch",
+      "side": "Port",
+      "age": 44,
+      "erg2k": "6:51",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/jjshaw14/128.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Brook Rutherford",
+      "side": "Starboard",
+      "age": 45,
+      "erg2k": "7:03",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/d33pthought/128.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Kristoffer Moore",
+      "side": "Starboard",
+      "age": 42,
+      "erg2k": "6:36",
+      "team": "Mens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/alterchuca/128.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Lauryn Hayes",
+      "side": "Port",
+      "age": 25,
+      "erg2k": "8:22",
+      "team": "Womens Competitive",
+      "image":"https://s3.amazonaws.com/uifaces/faces/twitter/catadeleon/128.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Helena Buckridge",
+      "side": "Starboard",
+      "age": 35,
+      "erg2k": "7:46",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/nicollerich/128.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Cordia Price",
+      "side": "Port",
+      "age": 41,
+      "erg2k": "8:02",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/mactopus/128.jpg"
+    },
+    {
+      "id": 24,
+      "name": "Emily Boyer",
+      "side": "Starboard",
+      "age": 37,
+      "erg2k" :  "8:12",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/divya/128.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Colleen Walsh",
+      "side": "Starboard",
+      "age": 21,
+      "erg2k": "7:05",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/deeenright/128.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Annalise Ebert",
+      "side": "Port",
+      "age": 45,
+      "erg2k": "7:55",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/katiemdaly/128.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Susie Hartmann",
+      "side": "Port",
+      "age": 35,
+      "erg2k": "7:42",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/elenadissi/128.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Leann Hauck",
+      "side": "Port",
+      "age": 43,
+      "erg2k": "7:59",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/giuliusa/128.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Frances McGlynn",
+      "side": "Starboard",
+      "age": 51,
+      "erg2k": "8:45",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/jennyyo/128.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Lilla Schneider",
+      "side": "Starboard",
+      "age": 52,
+      "erg2k": "9:12",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/souuf/128.jpg"
+    },
+    {
+      "id": 31,
+      "name": "Sibyl Schimmel",
+      "side": "Port",
+      "age": 45,
+      "erg2k": "7:49",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/eitarafa/128.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Molly Nolan",
+      "side": "Starboard",
+      "age": 19,
+      "erg2k":"6:57",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/raquelwilson/128.jpg"
+    },
+    {
+      "id": 33,
+      "name": "Emilie Zemlak",
+      "side": "Port",
+      "age": 44,
+      "erg2k": "8:09",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/curiousonaut/128.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Maxie Grimes",
+      "side": "Starboard",
+      "age": 49,
+      "erg2k" :  "8:55",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/amandabuzard/128.jpg"
+    },
+    {
+      "id": 35,
+      "name": "Gerda Rogahn",
+      "side": "Starboard",
+      "age": 31,
+      "erg2k": "7:47",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/xamorep/128.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Graciela Cormier",
+      "side": "Port",
+      "age": 35,
+      "erg2k": "7:45",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/thaisselenator_/128.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Angeline Graham",
+      "side": "Port",
+      "age": 41,
+      "erg2k": "8:32",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/madysondesigns/128.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Ebba Boyer",
+      "side": "Port",
+      "age": 44,
+      "erg2k": "7:22",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/IsaryAmairani/128.jpg"
+    },
+    {
+      "id": 39,
+      "name": "Theresia Nitzsche",
+      "side": "Starboard",
+      "age": 45,
+      "erg2k": "8:03",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/amywebbb/128.jpg"
+    },
+    {
+      "id": 40,
+      "name": "Kaela Romaguera",
+      "side": "Starboard",
+      "age": 42,
+      "erg2k": "7:12",
+      "team": "Womens Competitive",
+      "image": "https://s3.amazonaws.com/uifaces/faces/twitter/uxpiper/128.jpg"
+    }
+  ]
+}
