@@ -13,14 +13,21 @@ export class BoxComponent implements OnInit {
     racers: Rower[] = [];
     age = 0;
     erg2k = "0:00"
-  constructor() {  }
+    constructor() {  }
 
   ngOnInit() {
 
   }
 
-  pad2(num) {
-    return (num < 10 ? '0' : '') + num
+  printTime(min, sec) {
+    console.log('sec', sec)
+    if(sec >= 10) {
+      this.erg2k = min + ':' + sec
+    }
+    else {
+      console.log('im here')
+      this.erg2k = min + ':' + ('0' + sec)
+    }
 
   }
 
@@ -61,31 +68,27 @@ export class BoxComponent implements OnInit {
                           }, 0)
 
                           let calculatedSeconds =  secondsArray.reduce( (accum, curr) => {
-                              let minitotal =  curr + accum
+                              let minitotal =  curr + accum;
                               if(minitotal >= 60) {
-                                minitotal -= 60;
-                                calculatedMinutes += 1
-                                if (minitotal < 10) {
-
-                                  // this.pad2(minitotal)
-                                  let numstring =  (minitotal)
-                                  // console.log('numstring', numstring)
-                                 let realnum = parseFloat(numstring);
-                                //  console.log('real num', realnum)
-                                return realnum
+                                  minitotal -= 60;
+                                  calculatedMinutes += 1
+                                  if (minitotal < 10) {
+                                    // console.log('minitotal', minitotal)
+                                    let sec =  ('0' + minitotal).slice(-2);
+                                    return sec
                                 }
                               }
                               return minitotal
-                          })
-
-                          let joinedNumber = parseInt(calculatedMinutes) + '.' + parseInt(calculatedSeconds)
-                          let finalNumber = (Number(joinedNumber)/event.container.data.length).toString()
-                          console.log('final',finalNumber)
-                          this.erg2k = finalNumber.substring(0,1) + ':' + finalNumber.substring(2,4)
+                          },0)
 
 
-                          // console.log('calculated Min', calculatedMinutes)
-                          // console.log('calculated Sec', calculatedSeconds)
+                          let totalSeconds = ((parseInt(calculatedMinutes) * 60) + parseInt(calculatedSeconds))/event.container.data.length;
+
+                          let myMinutes = Math.floor(totalSeconds/60);
+                          let mySeconds = Math.floor(totalSeconds % 60);
+
+                          console.log('time', myMinutes + ':' + mySeconds)
+                          this.printTime(myMinutes, mySeconds)
 
                         })
 
@@ -146,12 +149,6 @@ export class BoxComponent implements OnInit {
           this.age = rowerAges/event.previousContainer.data.length + 1
 
         }
-
-
-
-
-
-
     }
   }
   /** Predicate function that only allows even numbers to be dropped into a list. */
@@ -168,10 +165,5 @@ export class BoxComponent implements OnInit {
   noReturnPredicate() {
     return false;
   }
-
-  getOverAllTime(time) {
-
-  }
-
 
 }
