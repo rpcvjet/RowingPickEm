@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem, CdkDrag} from '@angular/cdk/drag-drop';
 import {Rower} from '../shared/rower.model'
-import { container } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-box',
@@ -20,12 +19,10 @@ export class BoxComponent implements OnInit {
   }
 
   printTime(min, sec) {
-    console.log('sec', sec)
     if(sec >= 10) {
       this.erg2k = min + ':' + sec
     }
     else {
-      console.log('im here')
       this.erg2k = min + ':' + ('0' + sec)
     }
 
@@ -47,11 +44,10 @@ export class BoxComponent implements OnInit {
                         }).reduce( (accum, curr) => {
                           return accum + curr
                         },0)
-                        this.age = rowerAges/event.container.data.length;
-
+                        let finalAge = rowerAges/event.container.data.length;
+                        this.age = Math.floor(finalAge)
                         //2k
 
-                        let totalTime = []
                         let minutesArray = []
                         let secondsArray = []
 
@@ -73,8 +69,7 @@ export class BoxComponent implements OnInit {
                                   minitotal -= 60;
                                   calculatedMinutes += 1
                                   if (minitotal < 10) {
-                                    // console.log('minitotal', minitotal)
-                                    let sec =  ('0' + minitotal).slice(-2);
+                                    let sec =   parseFloat(minitotal)
                                     return sec
                                 }
                               }
@@ -85,9 +80,8 @@ export class BoxComponent implements OnInit {
                           let totalSeconds = ((parseInt(calculatedMinutes) * 60) + parseInt(calculatedSeconds))/event.container.data.length;
 
                           let myMinutes = Math.floor(totalSeconds/60);
-                          let mySeconds = Math.floor(totalSeconds % 60);
+                          let mySeconds = Math.ceil(totalSeconds % 60);
 
-                          console.log('time', myMinutes + ':' + mySeconds)
                           this.printTime(myMinutes, mySeconds)
 
                         })
@@ -104,41 +98,44 @@ export class BoxComponent implements OnInit {
           return accum + curr
         },-1);
 
+        //2k
         let minArray= [];
-        let secondsArray = []
+        let secArray = []
 
         let rower2ks = event.previousContainer.data.map(rower => {
-
 
           let time = rower.erg2k.split(':')
           let min = parseInt(time[0])
           let seconds = parseInt(time[1])
 
           minArray.push(min)
-          secondsArray.push(seconds)
+          secArray.push(seconds)
 
-        let finalSec = secondsArray.reduce((accum, curr) => {
+        let calcMinutes = minArray.reduce((accum, curr) => {
             return accum + curr
 
           },0)
 
-        let finalMin = minArray.reduce((accum, curr) => {
-             return accum + curr
+        let calcSeconds = secArray.reduce((accum, curr) => {
+             let tempTotal = curr + accum
+             if(tempTotal >= 60) {
+              tempTotal -= 60;
+              calcMinutes += 1
+              if (tempTotal < 10) {
+                let sec =  parseFloat(tempTotal);
+                return sec
+            }
+          }
+          return tempTotal
         },0)
 
-        console.log('min array', minArray)
-        // console.log('finalMin', finalMin)
+        let totalSeconds2 = ((parseInt(calcMinutes) * 60) + parseInt(calcSeconds))/event.previousContainer.data.length;
 
-        if(event.previousContainer.data.length === 1) {
-          if(finalMin % 2 === 0) {
-            this.erg2k = finalMin + ':' + finalSec
-            }
-        }
-        else {
-          this.erg2k = finalMin/event.previousContainer.data.length + ':' + finalSec/event.previousContainer.data.length;
-        }
-        })
+        let myMinutes2 = Math.floor(totalSeconds2/60);
+        let mySeconds2 = Math.ceil(totalSeconds2 % 60);
 
+        this.printTime(myMinutes2, mySeconds2)
+      })
 
 
         if(event.previousContainer.data.length === 0) {
@@ -146,8 +143,8 @@ export class BoxComponent implements OnInit {
           this.erg2k = "0:00"
         } else {
 
-          this.age = rowerAges/event.previousContainer.data.length + 1
-
+          let finalAge2 = rowerAges/event.previousContainer.data.length + 1
+          this.age = Math.floor(finalAge2)
         }
     }
   }
