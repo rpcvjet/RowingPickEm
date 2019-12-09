@@ -13,9 +13,13 @@
     [cdkDropListData]="racers"
     cdkDropListConnectedTo="rowers"
     (cdkDropListDropped)="drop($event)"
+    [cdkDropListEnterPredicate]="racerPredicate"
+
     class="racer-list">
 
-  <mat-list-item *ngFor="let racer of racers"cdkDrag [cdkDragData]='racer' class="racer-box">
+  <mat-list-item *ngFor="let racer of racers"cdkDrag [cdkDragData]='racer' class="racer-box"
+
+  >
     <img matListAvatar [src]="racer.image" alt="...">
       <h3 matLine> {{racer.name}} </h3>
       <p matLine>
@@ -40,8 +44,13 @@
     [cdkDropListData]="rowers"
     cdkDropListConnectedTo="racers"
     (cdkDropListDropped)="drop($event)"
+
     class="example-list">
-      <mat-list-item *ngFor="let r of rowers"cdkDrag [cdkDragData]='r' class="example-box">
+    <mat-list-item *ngFor="let r of rowers"cdkDrag [cdkDragData]='r' class="example-box"
+
+
+      >
+
         <img matListAvatar [src]="r.image" alt="...">
         <h3 matLine> {{r.name}} </h3>
         <p matLine>
