@@ -1,66 +1,48 @@
 <div class='container'>
-    <!-- Boat container -->
-<div class="buckets">
-  <div class='title'>
-    <h2>8 man boat</h2>
-  </div>
-  <h2 class="aveage">Ave Age: {{age}}</h2>
-  <h2 class="aveage">Ave 2k: {{erg2k}}</h2>
-  <mat-list>
-  <div
-    cdkDropList
-    id="racers"
-    [cdkDropListData]="racers"
-    cdkDropListConnectedTo="rowers"
-    (cdkDropListDropped)="drop($event)"
-    [cdkDropListEnterPredicate]="racerPredicate"
-
-    class="racer-list">
-
-  <mat-list-item *ngFor="let racer of racers"cdkDrag [cdkDragData]='racer' class="racer-box"
-
-  >
-    <img matListAvatar [src]="racer.image" alt="...">
-      <h3 matLine> {{racer.name}} </h3>
-      <p matLine>
-        Age: <span> {{racer.age}} </span> <br/>
-        Side: <span> {{racer.side}} </span> <br/>
-        2k: <span> {{racer.erg2k}} </span> <br/>
-      </p>
-  </mat-list-item>
-</div>
-</mat-list>
-</div>
-
-<!-- rower container -->
-<!-- <div class="title">
-  <h2>rowers</h2>
-</div> -->
-<div class="buckets rowers">
-  <mat-list>
-  <div
-    id="rowers"
-    cdkDropList
-    [cdkDropListData]="rowers"
-    cdkDropListConnectedTo="racers"
-    (cdkDropListDropped)="drop($event)"
-
-    class="example-list">
-    <mat-list-item *ngFor="let r of rowers"cdkDrag [cdkDragData]='r' class="example-box"
-
-
-      >
-
-        <img matListAvatar [src]="r.image" alt="...">
-        <h3 matLine> {{r.name}} </h3>
-        <p matLine>
-          Age: <span> {{r.age}} </span> <br/>
-          Side: <span> {{r.side}} </span> <br/>
-          2k: <span> {{r.erg2k}} </span> <br/>
-        </p>
-      </mat-list-item>
+  <!-- Boat container -->
+  <div class="buckets">
+    <div class='title'>
+      <h2>8 man boat</h2>
     </div>
-  </mat-list>
-</div>
+    <h2 class="aveage">Ave Age: {{age}}</h2>
+    <h2 class="aveage">Ave 2k: {{erg2k}}</h2>
+    <mat-list>
+      <div cdkDropList id="racers" [cdkDropListData]="racers" cdkDropListConnectedTo="rowers"
+        (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="racerPredicate" class="racer-list">
+
+        <mat-list-item *ngFor="let racer of racers" cdkDrag [cdkDragData]='racer' class="racer-box">
+          <img matListAvatar [src]="racer.image" alt="...">
+          <h3 matLine> {{racer.name}} </h3>
+          <p matLine>
+            Age: <span> {{racer.age}} </span> <br />
+            Side: <span> {{racer.side}} </span> <br />
+            2k: <span> {{racer.erg2k}} </span> <br />
+          </p>
+        </mat-list-item>
+      </div>
+    </mat-list>
+  </div>
+
+  <!-- rower container -->
+  <div class="buckets rowers">
+    <div class="title">
+      <h2>rowers</h2>
+    </div>
+    <mat-list>
+      <div id="rowers" cdkDropList [cdkDropListData]="rowers" cdkDropListConnectedTo="racers"
+        (cdkDropListDropped)="drop($event)" class="example-list">
+        <mat-list-item *ngFor="let r of rowers" cdkDrag [cdkDragData]='r' class="example-box">
+
+          <img matListAvatar [src]="r.image" alt="...">
+          <h3 matLine> {{r.name}} </h3>
+          <p matLine>
+            Age: <span> {{r.age}} </span> <br />
+            Side: <span> {{r.side}} </span> <br />
+            2k: <span> {{r.erg2k}} </span> <br />
+          </p>
+        </mat-list-item>
+      </div>
+    </mat-list>
+  </div>
 
 </div>

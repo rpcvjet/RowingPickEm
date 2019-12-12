@@ -152,20 +152,10 @@ export class BoxComponent implements OnInit {
     }
 
   }
-  test(){
-    console.log('hi')
-  }
-
-  // isDragging(event) {
-  //   console.log(event)
-  //   if(event.container.data.length > 2) {
-  //     event.item.element.nativeElement.style.backgroundColor = 'blue'
-  //   }
-  // }
 
   racerPredicate(item, event ) {
-    if(event.data.length === 2) {
-      item.element.nativeElement.style.color = 'blue'
+    if(event.data.length === 8) {
+      // item.element.nativeElement.style.color = 'blue'   <- only works when you return it back to rower list
       return false
     }
     return true
