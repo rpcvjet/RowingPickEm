@@ -12,6 +12,7 @@ export class BoxComponent implements OnInit {
     racers: Rower[] = [];
     age = 0;
     erg2k = "0:00"
+    limit: true
     constructor() {  }
 
   ngOnInit() {
@@ -35,6 +36,7 @@ export class BoxComponent implements OnInit {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
       //moving right to left
     } else if(event.container.id === 'racers') {
+
       transferArrayItem(event.previousContainer.data,
                         event.container.data,
                         event.previousIndex,
@@ -85,6 +87,7 @@ export class BoxComponent implements OnInit {
                           this.printTime(myMinutes, mySeconds)
 
                         })
+
 
     //moving left to right
     } else if (event.container.id === 'rowers') {
@@ -147,20 +150,14 @@ export class BoxComponent implements OnInit {
           this.age = Math.floor(finalAge2)
         }
     }
-  }
-  /** Predicate function that only allows even numbers to be dropped into a list. */
-  // evenPredicate(item: CdkDrag<number>) {
-  //   return item.data % 2 === 0;
-  // }
 
-  racerPredicate(item: CdkDrag<any>) {
-
-    console.log('item',item.data)
   }
 
-  /** Predicate function that doesn't allow items to be dropped into a list. */
-  noReturnPredicate() {
-    return false;
+  racerPredicate(item, event ) {
+    if(event.data.length === 8) {
+      // item.element.nativeElement.style.color = 'blue'   <- only works when you return it back to rower list
+      return false
+    }
+    return true
   }
-
 }

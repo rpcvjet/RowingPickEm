@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Rower } from './rower.model'
 import {HttpClient} from '@angular/common/http';
-const BASE_URL = 'http://localhost:3000/rowers';
+const BASE_URL = 'https://jsonserverrowerapi.herokuapp.com/rowers';
 import { Observable, BehaviorSubject } from 'rxjs';
-
 
 
 @Injectable({
   providedIn: 'root'
 })
-
 
 export class RowerService {
 
@@ -19,8 +17,5 @@ export class RowerService {
     return this.http.get(`${BASE_URL}`)
 
   }
-
-
-
 
 }
